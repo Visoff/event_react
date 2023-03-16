@@ -16,8 +16,7 @@ div.container > header {
 
 div.container > main {
     flex: 1;
-    -webkit-mask-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
-    mask-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
+    background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
     background-position: 50vw 50%;
     background-size: 75vw;
     background-repeat: no-repeat;
