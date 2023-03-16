@@ -11,15 +11,18 @@ div.container {
 
 div.container > header {
     height: 3.5rem;
-    background-color: red;
+    background-color: rgba(65, 27, 147, .8);
 }
 
 div.container > main {
     flex: 1;
-    background-color: blue;
+    background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
+    background-position: 50% 0px;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
 
 div.container > nav {
     height: 3.5rem;
-    background-color: lime;
+    background-color: rgba(65, 27, 147, .8);
 }
