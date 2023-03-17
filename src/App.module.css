@@ -17,8 +17,8 @@ div.container > header {
 div.container > main {
     flex: 1;
     background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
-    background-position: 50vw 50%;
-    background-size: 75vw;
+    background-position: calc(50% + 50vw) 50%;
+    background-size: calc(100vh - 7rem);
     background-repeat: no-repeat;
     background-color: rgba(65, 27, 147, .3);
 }
