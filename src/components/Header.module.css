@@ -1,11 +1,12 @@
 div.container {
-    width: 100%;
+    width: calc(100% - 2rem);
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 1rem;
 }
 
 div.container > button {
-    
+
 }
