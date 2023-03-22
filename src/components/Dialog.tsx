@@ -7,7 +7,13 @@ export default function Dialog() {
     return (
         <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? setActive(false) : ""}}>
             <div className={style.main}>
-                123456
+                <h1>Выберите команду для участия</h1>
+                <div className={style.list}></div>
+                <div className={style.buttons}>
+                    <button>Найти команду</button>
+                    <button>Создать новую</button>
+                    <button>Выбрать</button>
+                </div>
             </div>
         </div>
     )
