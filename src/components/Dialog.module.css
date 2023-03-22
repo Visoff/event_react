@@ -18,6 +18,17 @@ div.container > div.main {
 
     height: calc(50% - 2rem);
     width: calc(90% - 3rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.main > h1 {
+    font-size: 1rem;
+}
+div.main > list {
+    flex-grow: 1;
 }
 
 div.container:not(.active) {display: none;}
