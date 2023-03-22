@@ -9,7 +9,9 @@ export default function App() {
             <header>
                 <Header />
             </header>
-            <main></main>
+            <main>
+                <Main />
+            </main>
             <nav>789</nav>
         </div>
     )
