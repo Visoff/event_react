@@ -17,7 +17,6 @@ div.container > header {
 div.container > main {
     position: relative;
     flex: 1;
-    background-color: hsla(259, 69%, 34%, 0.3);
 }
 
 div.container > main::after {
