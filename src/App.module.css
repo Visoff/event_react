@@ -18,6 +18,7 @@ div.container > main {
     position: relative;
     flex: 1;
     background: transparent;
+    width: 100%;
 }
 
 div.container > main::after {
