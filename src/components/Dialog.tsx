@@ -6,7 +6,8 @@ export default function Dialog() {
     const [Active, setActive] = useContext(PopupContext)
     return (
         <div className={style.container + (Active ? " "+style.active : "")}>
-            <div className={style.background}>123456</div>
+            <div className={style.background}></div>
+            123456
         </div>
     )
 }
