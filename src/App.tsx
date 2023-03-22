@@ -1,4 +1,5 @@
 import Header from "./components/Header"
+import Main from "./components/Main"
 
 import style from "./App.module.css"
 
@@ -8,7 +9,7 @@ export default function App() {
             <header>
                 <Header />
             </header>
-            <main>{new Array(1000).fill(1)}</main>
+            <main></main>
             <nav>789</nav>
         </div>
     )
