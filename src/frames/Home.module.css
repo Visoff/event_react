@@ -6,3 +6,8 @@ div.container {
     padding: 1.4rem 0;
     gap: 1.4rem;
 }
+
+div.container > h1 {
+    font-size: 1.25rem;
+    font-style: normal;
+}
