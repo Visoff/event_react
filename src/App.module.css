@@ -17,6 +17,7 @@ div.container > header {
 div.container > main {
     position: relative;
     flex: 1;
+    background: transparent;
 }
 
 div.container > main::after {
@@ -34,6 +35,7 @@ div.container > main::after {
     background-repeat: no-repeat;
     filter: invert(17%) sepia(31%) saturate(7452%) hue-rotate(254deg) brightness(77%) contrast(104%);
     opacity: .3;
+    z-index: -1;
 }
 
 div.container > nav {

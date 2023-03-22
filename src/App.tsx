@@ -8,7 +8,7 @@ export default function App() {
             <header>
                 <Header />
             </header>
-            <main>456</main>
+            <main>{new Array(1000).fill(1)}</main>
             <nav>789</nav>
         </div>
     )
