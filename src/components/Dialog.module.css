@@ -15,6 +15,9 @@ div.container > div.main {
     padding: 1rem 1.5rem;
     background-color: whitesmoke;
     border-radius: 1.2rem;
+
+    height: 50%;
+    width: 90%;
 }
 
 div.container:not(.active) {display: none;}
