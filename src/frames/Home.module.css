@@ -3,6 +3,7 @@ div.container {
     height: calc(100% - 2.8rem);
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 1.4rem 0;
     gap: 1.4rem;
 }
