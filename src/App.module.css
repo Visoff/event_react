@@ -33,7 +33,8 @@ div.container > main::after {
     background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
     background-size: 100%;
     background-repeat: no-repeat;
-    filter: invert(100%);
+    filter: invert(17%) sepia(31%) saturate(7452%) hue-rotate(254deg) brightness(77%) contrast(104%);
+    opacity: .3;
 }
 
 div.container > nav {
