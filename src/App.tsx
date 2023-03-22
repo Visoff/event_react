@@ -10,6 +10,7 @@ export default function App() {
     const [PopupActive, setPopupActive] = useState(false)
     return (
         <div className={style.container}>
+            <div style={{display:"none"}}>{PopupActive}</div>
             <PopupContext.Provider value={[PopupActive, setPopupActive]}>
                 <header>
                     <Header />
