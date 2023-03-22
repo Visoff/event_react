@@ -14,15 +14,16 @@ div.container > header {
     background-color: rgba(65, 27, 147, .8);
 }
 
-div.container > div.main {
+div.container > main {
     position: relative;
     flex: 1;
     background-color: hsla(259, 69%, 34%, 0.3);
 }
 
-div.container > div.main::after {
+div.container > main::after {
     display: block;
     position: absolute;
+    content: "";
     height: calc(100vh - 7rem);
     aspect-ratio: 1;
     right: 0;

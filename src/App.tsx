@@ -8,7 +8,7 @@ export default function App() {
             <header>
                 <Header />
             </header>
-            <div className={style.main}>123</div>
+            <main>456</main>
             <nav>789</nav>
         </div>
     )
