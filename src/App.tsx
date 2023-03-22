@@ -1,5 +1,5 @@
 import Header from "./components/Header"
-import Main from "./components/Main"
+import Home from "./frames/Home"
 
 import style from "./App.module.css"
 
@@ -10,7 +10,7 @@ export default function App() {
                 <Header />
             </header>
             <main>
-                <Main />
+                <Home />
             </main>
             <nav>789</nav>
         </div>
