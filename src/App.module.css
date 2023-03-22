@@ -28,7 +28,7 @@ div.container > main::after {
     aspect-ratio: 1;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     background-position: 0;
     background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
     background-size: 100%;
