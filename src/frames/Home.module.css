@@ -21,3 +21,7 @@ div.container > h2 {
     font-size: 1.25rem;
     font-style: normal;
 }
+
+div.container > img {
+    max-width: calc(100% - 1rem);
+}
