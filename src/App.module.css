@@ -33,6 +33,7 @@ div.container > main::after {
     background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
     background-size: 100%;
     background-repeat: no-repeat;
+    filter: invert(100%);
 }
 
 div.container > nav {
