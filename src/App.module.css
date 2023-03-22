@@ -14,13 +14,13 @@ div.container > header {
     background-color: rgba(65, 27, 147, .8);
 }
 
-div.container > main {
+div.container > div.main {
     position: relative;
     flex: 1;
     background-color: hsla(259, 69%, 34%, 0.3);
 }
 
-div.container > main::after {
+div.container > div.main::after {
     display: block;
     position: absolute;
     height: calc(100vh - 7rem);
