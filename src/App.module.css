@@ -15,13 +15,22 @@ div.container > header {
 }
 
 div.container > main {
+    position: relative;
     flex: 1;
-    background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
-    filter: hue-rotate(258deg) brightness(100%);
-    background-position: calc(50% + 50vw) 50%;
-    background-size: calc(100vh - 7rem);
-    background-repeat: no-repeat;
     background-color: hsla(259, 69%, 34%, 0.3);
+}
+
+div.container > main::after {
+    display: block;
+    position: absolute;
+    height: calc(100vh - 7rem);
+    aspect-ratio: 1;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 div.container > nav {
