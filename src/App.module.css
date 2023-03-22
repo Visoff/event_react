@@ -29,6 +29,7 @@ div.container > main::after {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    background-position: 0;
     background-image: url("https://visoff.ru/svg/CityHeroes_Icon.svg");
     background-size: 100%;
     background-repeat: no-repeat;
