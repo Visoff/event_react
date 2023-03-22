@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import PopupContext from "../PopupContext"
 import style from "./Dialog.module.css"
 
 export default function Dialog() {
-    const [Active, setActive] = useState(false)
+    const [Active, setActive] = useContext(PopupContext)
     return (
         <div className={style.container + (Active ? " "+style.active : "")}>
             <div className={style.background}></div>
