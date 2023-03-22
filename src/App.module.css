@@ -18,7 +18,7 @@ div.container > main {
     position: relative;
     flex: 1;
     background: transparent;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
