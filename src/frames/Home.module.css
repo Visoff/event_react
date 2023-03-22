@@ -12,3 +12,12 @@ div.container > h1 {
     font-size: 1.25rem;
     font-style: normal;
 }
+
+div.container > h2 {
+    padding: .2rem 1.2rem;
+    border-radius: 1.2rem;
+    background-color: rgba(65, 27, 147, 1);
+    color: whitesmoke;
+    font-size: 1.25rem;
+    font-style: normal;
+}
