@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Dialog from "./components/Dialog"
 import Home from "./frames/Home"
+import Nav from "./components/Nav"
 
 import style from "./App.module.css"
 import { createContext, useContext, useState } from "react"
@@ -17,7 +18,9 @@ export default function App() {
                 <main>
                     <Home />
                 </main>
-                <nav>789</nav>
+                <nav>
+                    <Nav />
+                </nav>
                 <Dialog />
             </PopupContext.Provider>
         </div>
