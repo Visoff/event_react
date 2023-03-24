@@ -42,9 +42,11 @@ export default function Dialog({sellected}:{sellected:string}) {
     var create = (
         <form className={style.main} onSubmit={createSubmitEvent}>
             <h1>Создание команды</h1>
-            <input type="text" value={createData.name} onInput={(e) => {setCreateData({...createData, name:(e.target as HTMLInputElement).value});}} />
+            <div className={style.list}>
+                <input type="text" value={createData.name} onInput={(e) => {setCreateData({...createData, name:(e.target as HTMLInputElement).value});}} />
+            </div>
             <div className={style.buttonsv1}>
-                <div>Создать</div>
+                <button>Создать</button>
             </div>
         </form>
     )
