@@ -36,12 +36,9 @@ div.buttons {
     flex-wrap: wrap;
 }
 
-div.buttons > button:nth-child(1) {
-    flex: 2;
-}
-
-div.buttons > button:not(:nth-child(1)) {
+div.buttons > button {
     flex: 1;
+    background-color: rgb(65, 27, 147);
 }
 
 div.container:not(.active) {display: none;}
