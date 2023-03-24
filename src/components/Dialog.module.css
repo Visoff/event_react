@@ -39,6 +39,8 @@ div.buttons {
 div.buttons > button {
     flex: 1;
     background-color: rgb(65, 27, 147);
+    color: whitesmoke;
+    font-size: 1.2rem;
 }
 
 div.container:not(.active) {display: none;}
