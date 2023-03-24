@@ -37,6 +37,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     })
     const createSubmitEvent = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        // request creation
     }
     var create = (
         <form className={style.main} onSubmit={createSubmitEvent}>
