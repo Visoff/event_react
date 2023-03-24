@@ -4,13 +4,14 @@ import style from "./Dialog.module.css"
 
 export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
+    const [page, setPage] = useState(sellected)
     var first = (
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
             <div className={style.list}></div>
             <div className={style.buttonsv1}>
                 <div>
-                    <button>Найти команду</button>
+                    <button onClick={() => {setPage("find")}}>Найти команду</button>
                 </div>
                 <div>
                     <button>Создать новую</button>
@@ -20,9 +21,20 @@ export default function Dialog({sellected}:{sellected:string}) {
         </div>
     )
 
+    var find = (
+        <div className={style.main}>
+            <h1>Поиск команды</h1>
+            <div className={style.lis}></div>
+        </div>
+    )
+
     return (
         <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? setActive(false) : ""}}>
-            {first}
+            {
+                page == "first" ? first : 
+                page == 'find' ? find :
+                ""
+            }
         </div>
     )
 }
