@@ -55,7 +55,7 @@ div.buttonsv1 > div > button {
 }
 
 div.list > div.team {
-    width: 100%;
+    width: calc(100% - 2px);
     height: 1.5rem;
     border: 1px solid black;
     display: flex;
