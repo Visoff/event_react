@@ -1,5 +1,9 @@
+import style from "./Dialog.module.css"
+
 export default function Team() {
     return (
-        <div>123</div>
+        <div className={style.team}>
+            <p className={style.name}>Name</p>
+        </div>
     )
 }
