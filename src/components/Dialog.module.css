@@ -26,7 +26,7 @@ div.container > div.main {
 
 div.main > h1 {
     font-size: 1rem;
-    padding: 1rem 0;
+    margin: 0 1rem;
 }
 div.main > .list {
     flex-grow: 1;
