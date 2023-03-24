@@ -17,7 +17,7 @@ export default function Dialog({sellected}:{sellected:string}) {
                     <button onClick={() => {setPage("find")}}>Найти команду</button>
                 </div>
                 <div>
-                    <button>Создать новую</button>
+                    <button onClick={() => {setPage("create")}}>Создать новую</button>
                     <button>Выбрать</button>
                 </div>
             </div>
@@ -33,11 +33,18 @@ export default function Dialog({sellected}:{sellected:string}) {
         </div>
     )
 
+    var create = (
+        <form className={style.main}>
+            <h1>Создание команды</h1>
+        </form>
+    )
+
     return (
         <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? setActive(false) : ""}}>
             {
                 page == "first" ? first : 
                 page == 'find' ? find :
+                page == 'create' ? create :
                 ""
             }
         </div>

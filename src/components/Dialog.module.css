@@ -7,7 +7,7 @@ div.container {
     background-color: rgba(0, 0, 0, .25);
 }
 
-div.container > div.main {
+div.container > .main {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -24,11 +24,11 @@ div.container > div.main {
     align-items: center;
 }
 
-div.main > h1 {
+.main > h1 {
     font-size: 1rem;
     margin: 1rem;
 }
-div.main > .list {
+.main > .list {
     flex-grow: 1;
     width: 100%;
     overflow-y: auto;
