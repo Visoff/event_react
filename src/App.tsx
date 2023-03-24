@@ -21,7 +21,7 @@ export default function App() {
                 <nav>
                     <Nav />
                 </nav>
-                <Dialog />
+                <Dialog sellected="first" />
             </PopupContext.Provider>
         </div>
     )
