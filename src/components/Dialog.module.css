@@ -59,11 +59,13 @@ div.list > div.team {
     height: 1.5rem;
     border: 1px solid black;
     display: flex;
+    align-items: center;
 }
 
 div.list > div.team > p.name {
     font-size: 1.1rem;
     font-weight: bold;
+    margin: 0 .2rem;
 }
 
 div.container:not(.active) {display: none;}
