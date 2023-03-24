@@ -16,7 +16,7 @@ div.container > div.main {
     background-color: whitesmoke;
     border-radius: 1.2rem;
 
-    height: calc(50% - 2rem);
+    height: calc(75% - 2rem);
     width: calc(90% - 3rem);
 
     display: flex;
