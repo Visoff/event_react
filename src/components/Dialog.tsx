@@ -7,7 +7,6 @@ import Dialog_Team from "./Dialog_Team"
 export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
-    if (!Active) {setPage("first")}
     var first = (
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
