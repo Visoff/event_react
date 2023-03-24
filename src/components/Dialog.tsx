@@ -9,7 +9,7 @@ export default function Dialog() {
             <div className={style.main}>
                 <h1>Выберите команду для участия</h1>
                 <div className={style.list}></div>
-                <div className={style.buttons}>
+                <div className={style.buttonsv1}>
                     <div>
                         <button>Найти команду</button>
                     </div>
