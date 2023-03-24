@@ -46,7 +46,9 @@ export default function Dialog({sellected}:{sellected:string}) {
                 <input type="text" value={createData.name} onInput={(e) => {setCreateData({...createData, name:(e.target as HTMLInputElement).value});}} />
             </div>
             <div className={style.buttonsv1}>
-                <button>Создать</button>
+                <div>
+                    <button>Создать</button>
+                </div>
             </div>
         </form>
     )
