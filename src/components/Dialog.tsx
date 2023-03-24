@@ -35,12 +35,11 @@ export default function Dialog({sellected}:{sellected:string}) {
     const [createData, setCreateData] = useState({
         name:""
     })
-
-    useEffect(() => {
-        console.log(createData)
-    }, [createData])
+    const createSubmitEvent = (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+    }
     var create = (
-        <form className={style.main} onSubmit={(e) => {e.preventDefault();}}>
+        <form className={style.main} onSubmit={createSubmitEvent}>
             <h1>Создание команды</h1>
             <input type="text" value={createData.name} onInput={(e) => {setCreateData({...createData, name:(e.target as HTMLInputElement).value});}} />
             <div className={style.buttonsv1}>
