@@ -37,7 +37,11 @@ div.buttons {
 }
 
 div.buttons > button:nth-child(1) {
-    background-color: red;
+    flex: 2;
+}
+
+div.buttons > button:not(:nth-child(1)) {
+    flex: 1;
 }
 
 div.container:not(.active) {display: none;}
