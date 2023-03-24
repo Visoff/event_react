@@ -30,6 +30,8 @@ div.main > h1 {
 }
 div.main > .list {
     flex-grow: 1;
+    width: 100%;
+    overflow-y: auto;
 }
 
 div.buttonsv1 {
