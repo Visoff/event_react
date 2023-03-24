@@ -44,15 +44,6 @@ div.container > main::after {
     z-index: -1;
 }
 
-div.buttons {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-div.buttons:nth-child(1) {
-    background-color: red;
-}
-
 div.container > nav {
     height: 3.5rem;
     background-color: rgba(65, 27, 147, .8);

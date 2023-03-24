@@ -31,4 +31,13 @@ div.main > .list {
     flex-grow: 1;
 }
 
+div.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.buttons:nth-child(1) {
+    background-color: red;
+}
+
 div.container:not(.active) {display: none;}
