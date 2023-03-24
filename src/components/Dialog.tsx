@@ -35,6 +35,10 @@ export default function Dialog({sellected}:{sellected:string}) {
     const [createData, setCreateData] = useState({
         name:""
     })
+
+    useEffect(() => {
+        console.log(createData)
+    }, [createData])
     var create = (
         <form className={style.main} onSubmit={(e) => {e.preventDefault();}}>
             <h1>Создание команды</h1>
