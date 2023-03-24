@@ -34,7 +34,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     )
 
     var create = (
-        <form className={style.main}>
+        <form className={style.main} onSubmit={(e) => {e.preventDefault();}}>
             <h1>Создание команды</h1>
         </form>
     )
