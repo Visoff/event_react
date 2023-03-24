@@ -32,9 +32,16 @@ export default function Dialog({sellected}:{sellected:string}) {
         </div>
     )
 
+    const [createData, setCreateData] = useState({
+        name:""
+    })
     var create = (
         <form className={style.main} onSubmit={(e) => {e.preventDefault();}}>
             <h1>Создание команды</h1>
+            <input type="text" value={createData.name} onInput={(e) => {setCreateData({...createData, name:(e.target as HTMLInputElement).value});}} />
+            <div className={style.buttonsv1}>
+                <div>Создать</div>
+            </div>
         </form>
     )
 
