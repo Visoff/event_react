@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react"
 import PopupContext from "../PopupContext"
 import style from "./Dialog.module.css"
 
+import Dialog_Team from "./Dialog_Team"
+
 export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
@@ -24,7 +26,9 @@ export default function Dialog({sellected}:{sellected:string}) {
     var find = (
         <div className={style.main}>
             <h1>Поиск команды</h1>
-            <div className={style.lis}></div>
+            <div className={style.list}>
+                <Dialog_Team />
+            </div>
         </div>
     )
 
