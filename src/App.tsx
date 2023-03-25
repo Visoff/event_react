@@ -9,7 +9,8 @@ import PopupContext from "./PopupContext"
 
 export default function App() {
     const [PopupActive, setPopupActive] = useState(false)
-    return (
+    var user_id = localStorage.getItem("user_id")
+    var registered = (
         <div className={style.container}>
             <PopupContext.Provider value={[PopupActive, setPopupActive]}>
                 <header>
@@ -24,5 +25,15 @@ export default function App() {
                 <Dialog sellected="first" />
             </PopupContext.Provider>
         </div>
+    )
+
+    var registration = (
+        <div>
+
+        </div>
+    )
+
+    return (
+        typeof(user_id) == "undefined" ? registration : registered
     )
 }
