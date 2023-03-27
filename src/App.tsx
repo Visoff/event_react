@@ -6,6 +6,7 @@ import Nav from "./components/Nav"
 import style from "./App.module.css"
 import { createContext, useContext, useState } from "react"
 import PopupContext from "./PopupContext"
+import Auth from "./frames/Authantication"
 
 export default function App() {
     const [PopupActive, setPopupActive] = useState(false)
@@ -28,8 +29,8 @@ export default function App() {
     )
 
     var registration = (
-        <div>
-
+        <div className={style.container}>
+            <Auth />
         </div>
     )
 
