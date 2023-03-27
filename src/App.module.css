@@ -48,3 +48,8 @@ div.container > nav {
     height: 3.5rem;
     background-color: rgba(65, 27, 147, .8);
 }
+
+div.registration {
+    display: flex;
+    place-items: center;
+}

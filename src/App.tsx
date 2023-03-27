@@ -28,8 +28,8 @@ export default function App() {
     )
 
     var registration = (
-        <div>
-
+        <div className={style.registration}>
+            123
         </div>
     )
 
