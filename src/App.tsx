@@ -35,6 +35,6 @@ export default function App() {
     )
 
     return (
-        typeof(user_id) == "undefined" ? registration : registered
+        user_id == null ? registration : registered
     )
 }
