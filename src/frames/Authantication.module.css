@@ -1,4 +1,5 @@
 form.form {
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
