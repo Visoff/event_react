@@ -13,5 +13,5 @@ form.form > input {
     border: 1px solid black;
     border-radius: 1rem;
     font-size: 1em;
-    padding: 1rem 0;
+    padding: 0 1rem;
 }
