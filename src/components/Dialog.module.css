@@ -60,7 +60,8 @@ div.buttonsv1 > div > button {
 div.list > div.team {
     width: calc(100% - 2px);
     height: 1.5rem;
-    border: 1px solid black;
+    box-shadow: 0 0 10px solid black;
+    border-radius: 1.2rem;
     display: flex;
     align-items: center;
 }
