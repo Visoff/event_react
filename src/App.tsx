@@ -29,7 +29,10 @@ export default function App() {
 
     var registration = (
         <div>
+            <form className={style.registration}>
 
+            </form>
+            <form className={style.login}></form>
         </div>
     )
 
