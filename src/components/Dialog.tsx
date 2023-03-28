@@ -14,11 +14,9 @@ export default function Dialog({sellected}:{sellected:string}) {
     useEffect(() => {
         axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(res.data)
-            console.log(res.data)
         })
         axios.get(`https://api.visoff.ru/db/team/search`).then(res => {
             setSearchTeams(res.data)
-            console.log(res.data)
         })
     }, [page, Active])
     var first = (
