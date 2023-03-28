@@ -12,7 +12,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     useEffect(() => {
         axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(JSON.parse(res.data))
-            console.log(JSON.parse(res.data))
+            console.log(res.data)
         })
     }, [])
     var first = (
