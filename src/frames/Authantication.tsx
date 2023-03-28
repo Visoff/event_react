@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from "axios"
 
 import style from "./Authantication.module.css"
 
@@ -7,6 +8,10 @@ export default function Auth() {
 
     const RegSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        if (RegData.password != RegData.repeat) {return;}
+        axios.post("https://api.visoff.ru/db/user/register", {name:RegData.name, email:RegData.email, password:RegData.password}).then(() => {
+            setMode("login")
+        })
     }
     const [RegData, setRegData] = useState({
         email:"",
