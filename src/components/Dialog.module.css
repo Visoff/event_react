@@ -47,7 +47,6 @@ div.buttonsv1 > div {
     width: 100%;
     height: fit-content;
     display: flex;
-    padding: .5rem 0;
 }
 
 div.buttonsv1 > div > button {
@@ -56,6 +55,7 @@ div.buttonsv1 > div > button {
     color: whitesmoke;
     font-size: 1.2rem;
     border: none;
+    padding: .2rem 0;
 }
 
 div.list > button.team {
