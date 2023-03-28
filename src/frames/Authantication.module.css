@@ -27,3 +27,10 @@ form.form > input {
 form.form > input::placeholder {
     color: rgba(245, 245, 245, .8)
 }
+
+form.form > button {
+    border: none;
+    border-radius: 1.2rem;
+    background-color: rgb(65, 27, 147);
+    box-shadow: 0 0 10px whitesmoke;
+}
