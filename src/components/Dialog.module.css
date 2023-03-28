@@ -47,6 +47,7 @@ div.buttonsv1 > div {
     width: 100%;
     height: fit-content;
     display: flex;
+    padding: .5rem 0;
 }
 
 div.buttonsv1 > div > button {
