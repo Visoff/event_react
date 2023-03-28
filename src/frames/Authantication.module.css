@@ -4,7 +4,7 @@ form.form {
     align-items: center;
     font-size: 1.3rem;
     gap: 1.2rem;
-    outline: 1px solid black;
+    box-shadow: 0 0 10px black;
     padding: 3rem .2rem;
     border-radius: 1.2rem;
     background-color: rgba(65, 27, 147, .2);
