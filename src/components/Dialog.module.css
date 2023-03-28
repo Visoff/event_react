@@ -58,14 +58,13 @@ div.buttonsv1 > div > button {
 }
 
 div.list > div.team {
-    --box-shadow-range: 10px;
     width: calc(100% - 10px);
     height: 1.5rem;
 
     margin-left: 5px;
     margin-top: 5px;
     
-    box-shadow: 0 0 var(--box-shadow-range) black;
+    box-shadow: 0 0 10px black;
     border-radius: 1.2rem;
     transition: box-shadow .3s;
 
@@ -75,7 +74,7 @@ div.list > div.team {
     position: relative;
 }
 div.list > div.team:hover {
-    --box-shadow-range: 15px;
+    box-shadow: 0 0 15px rgb(65, 27, 147);
 }
 
 div.list > div.team > p.name {
