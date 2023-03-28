@@ -58,13 +58,15 @@ div.buttonsv1 > div > button {
 }
 
 div.list > div.team {
-    width: calc(100% - 10px - 1rem);
+    width: calc(100% - 10px);
+    height: 1.5rem;
+
     margin-left: 5px;
     margin-top: 5px;
-    padding: 0 .5rem;
-    height: 1.5rem;
+    
     box-shadow: 0 0 10px black;
     border-radius: 1.2rem;
+
     display: flex;
     align-items: center;
 
@@ -76,7 +78,7 @@ div.list > div.team > p.name {
     font-size: 1.1rem;
     font-weight: bold;
     position: absolute;
-    left: 0;
+    left: 1rem;
     top: 50%;
     transform: translate(0, -50%);
 }
