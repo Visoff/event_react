@@ -58,7 +58,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     })
     const createSubmitEvent = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // request creation
+        axios.post("https://api.visoff.ru/db/team/register", {name:createData.name})
     }
     var create = (
         <form className={style.main} onSubmit={createSubmitEvent}>
