@@ -7,8 +7,8 @@ interface Props {
 
 export default function Team({name, className}:Props) {
     return (
-        <div className={style.team+(className != undefined ? " "+className : "")}>
+        <button className={style.team+(className != undefined ? " "+className : "")}>
             <p className={style.name}>{name}</p>
-        </div>
+        </button>
     )
 }
