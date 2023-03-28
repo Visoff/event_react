@@ -20,7 +20,7 @@ export default function Dialog({sellected}:{sellected:string}) {
             setSearchTeams(res.data)
             console.log(res.data)
         })
-    }, [])
+    }, [page, Active])
     var first = (
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
