@@ -76,7 +76,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     )
 
     return (
-        <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? setActive(false) : ""}}>
+        <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? (() => {setPage("first"); setActive(false)})() : ""}}>
             {
                 page == "first" ? first : 
                 page == 'find' ? find :
