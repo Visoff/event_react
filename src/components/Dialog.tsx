@@ -10,7 +10,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     const [page, setPage] = useState(sellected)
     const [Teams, setTeams] = useState([])
     useEffect(() => {
-        axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user)id")}/teams`).then(res => {
+        axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(JSON.parse(res.data))
         })
     }, [])
