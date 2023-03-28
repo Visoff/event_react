@@ -9,6 +9,11 @@ form.form {
     border-radius: 1.2rem;
 }
 
+main:has( > .form) {
+    display: grid;
+    place-items: center;
+}
+
 form.form > input {
     border: 1px solid black;
     border-radius: 1rem;
