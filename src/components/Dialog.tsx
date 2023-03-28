@@ -19,7 +19,7 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
             <div className={style.list}>
-                {Teams.map(el => {return <Dialog_Team name={(el as any).name} />})}
+                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team key={el.id} name={el.name} />})}
             </div>
             <div className={style.buttonsv1}>
                 <div>
