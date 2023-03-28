@@ -30,7 +30,9 @@ export default function App() {
 
     var registration = (
         <div className={style.container}>
-            <Auth />
+            <div className={style.main}>
+                <Auth />
+            </div>
         </div>
     )
 
