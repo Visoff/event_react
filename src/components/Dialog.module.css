@@ -72,7 +72,7 @@ div.list > button.team {
     align-items: center;
 
     position: relative;
-    color: black;
+    font-weight: normal;
 }
 div.list > button.team.selected {
     box-shadow: 0 0 15px rgb(65, 27, 147);
