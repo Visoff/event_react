@@ -26,26 +26,29 @@ export default function Auth() {
             <input type="text" placeholder="name" onChange={(e) => {setRegData({...RegData, name:(e.target as HTMLInputElement).value})}} value={RegData.name} />
             <input type="password" placeholder="password" onChange={(e) => {setRegData({...RegData, password:(e.target as HTMLInputElement).value})}} value={RegData.password} />
             <input type="password" placeholder="repeat password" onChange={(e) => {setRegData({...RegData, repeat:(e.target as HTMLInputElement).value})}} value={RegData.repeat} />
-            <button>Зарегистрироваться</button>
+            <button type="submit">Зарегистрироваться</button>
             <button className={style.switch} type="button" onClick={(e) => {setMode("login")}}>Уже есть акаунт?</button>
         </form>
     )
 
     const LogSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        axios.post("https://api.visoff.ru/db/user/login", {login:LogData.login, password:LogData.password}).then((res) => {
+            var body = res.data
+            localStorage.setItem("user_id", body.toString())
+            location.reload()
+        })
     }
     const [LogData, setLogData] = useState({
-        email:"",
-        name:"",
-        password:"",
-        repeat:""
+        login:"",
+        password:""
     })
 
     var login = (
         <form className={style.form} onSubmit={LogSubmit}>
-            <input type="email" placeholder="email || name" onChange={(e) => {setLogData({...LogData, email:(e.target as HTMLInputElement).value})}} value={LogData.email} />
+            <input type="text" placeholder="email || name" onChange={(e) => {setLogData({...LogData, login:(e.target as HTMLInputElement).value})}} value={LogData.login} />
             <input type="password" placeholder="password" onChange={(e) => {setLogData({...LogData, password:(e.target as HTMLInputElement).value})}} value={LogData.password} />
-            <button>Войти</button>
+            <button type="submit">Войти</button>
             <button className={style.switch} type="button" onClick={(e) => {setMode("reg")}}>Ещё нет акаунта?</button>
         </form>
     )
