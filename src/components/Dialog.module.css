@@ -73,7 +73,7 @@ div.list > div.team {
 
     position: relative;
 }
-div.list > div.team:hover {
+div.list > div.team.selected {
     box-shadow: 0 0 15px rgb(65, 27, 147);
 }
 

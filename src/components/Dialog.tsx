@@ -9,6 +9,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
     const [Teams, setTeams] = useState([])
+    const [SelectedTeam, setSelectedTeam] = useState(0)
     useEffect(() => {
         axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(res.data)
@@ -19,7 +20,7 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
             <div className={style.list}>
-                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team key={el.id} name={el.name} />})}
+                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team className={el.id == SelectedTeam ? style.sellected : ""} key={el.id} name={el.name} />})}
             </div>
             <div className={style.buttonsv1}>
                 <div>
