@@ -16,11 +16,14 @@ main:has( > .form) {
 }
 
 form.form > input {
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-radius: 1rem;
     font-size: 1em;
     padding: 0 1rem;
     background: none;
     background-color: rgba(0, 0, 0, .2);
     color: whitesmoke;
+}
+form.form > input::placeholder {
+    color: rgba(245, 245, 245, .8)
 }
