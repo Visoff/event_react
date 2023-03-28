@@ -31,6 +31,8 @@ form.form > input::placeholder {
 form.form > button {
     border: none;
     border-radius: 1.2rem;
-    background-color: rgb(65, 27, 147);
+    background-color: rgb(91, 53, 173);
     box-shadow: 0 0 10px whitesmoke;
+    color: whitesmoke;
+    font-size: 1em;
 }
