@@ -11,6 +11,7 @@ form.form {
 }
 
 main:has( > .form) {
+    background-color: rgb(33, 0, 104);
     display: grid;
     place-items: center;
 }
