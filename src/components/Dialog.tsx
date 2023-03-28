@@ -16,7 +16,7 @@ export default function Dialog({sellected}:{sellected:string}) {
             setTeams(res.data)
             console.log(res.data)
         })
-        axios.get(`https://api.visoff.ru/team/search`).then(res => {
+        axios.get(`https://api.visoff.ru/db/team/search`).then(res => {
             setSearchTeams(res.data)
             console.log(res.data)
         })
