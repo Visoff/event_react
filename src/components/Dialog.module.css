@@ -57,7 +57,7 @@ div.buttonsv1 > div > button {
     border: none;
 }
 
-div.list > div.team {
+div.list > button.team {
     width: calc(100% - 10px);
     height: 1.5rem;
 
@@ -73,11 +73,11 @@ div.list > div.team {
 
     position: relative;
 }
-div.list > div.team.selected {
+div.list > button.team.selected {
     box-shadow: 0 0 15px rgb(65, 27, 147);
 }
 
-div.list > div.team > p.name {
+div.list > button.team > p.name {
     margin: 0;
     font-size: 1.1rem;
     font-weight: bold;
