@@ -26,10 +26,23 @@ export default function Auth() {
         </form>
     )
 
-    var login = (
-        <div>
+    const LogSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+    }
+    const [LogData, setLogData] = useState({
+        email:"",
+        name:"",
+        password:"",
+        repeat:""
+    })
 
-        </div>
+    var login = (
+        <form className={style.form} onSubmit={LogSubmit}>
+            <input type="email" placeholder="email || name" onChange={(e) => {setLogData({...LogData, email:(e.target as HTMLInputElement).value})}} value={LogData.email} />
+            <input type="password" placeholder="password" onChange={(e) => {setLogData({...LogData, password:(e.target as HTMLInputElement).value})}} value={LogData.password} />
+            <button>Войти</button>
+            <button className={style.switch} type="button" onClick={(e) => {setMode("reg")}}>Ещё нет акаунта?</button>
+        </form>
     )
 
     return (
