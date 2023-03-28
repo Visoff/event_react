@@ -8,7 +8,6 @@ form.form {
     padding: 1rem .2rem;
     border-radius: 1.2rem;
     background-color: rgba(65, 27, 147, .2);
-    color: whitesmoke;
 }
 
 main:has( > .form) {
@@ -22,4 +21,5 @@ form.form > input {
     font-size: 1em;
     padding: 0 1rem;
     background: none;
+    color: whitesmoke;
 }
