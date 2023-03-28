@@ -9,7 +9,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
     const [Teams, setTeams] = useState([])
-    const [SelectedTeam, setSelectedTeam] = useState(0)
+    const [SelectedTeam, setSelectedTeam] = useState({id:0, name:""})
     useEffect(() => {
         axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(res.data)
@@ -20,7 +20,7 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
             <div className={style.list}>
-                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el.id)}} className={el.id == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
+                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
             </div>
             <div className={style.buttonsv1}>
                 <div>
@@ -28,7 +28,7 @@ export default function Dialog({sellected}:{sellected:string}) {
                 </div>
                 <div>
                     <button onClick={() => {setPage("create")}}>Создать новую</button>
-                    <button>Выбрать</button>
+                    <button onClick={() => {axios.post(`https://api.visoff.ru/db/team/${SelectedTeam.id}/register/1`); setActive(false)}}>Выбрать</button>
                 </div>
             </div>
         </div>
