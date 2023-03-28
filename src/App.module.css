@@ -13,7 +13,7 @@ div.container {
     flex-direction: column;
 }
 
-div.container:has(> form) {
+div.container:has( .main > form) {
     align-items: center;
     justify-content: center;
 }
