@@ -36,3 +36,10 @@ form.form > button {
     color: whitesmoke;
     font-size: 1em;
 }
+
+form.form > button.switch {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    transform: translate(-50%, 0);
+}
