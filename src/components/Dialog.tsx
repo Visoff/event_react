@@ -20,7 +20,7 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
             <div className={style.list}>
-                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el.id)}} className={el.id == SelectedTeam ? style.sellected : ""} key={el.id} name={el.name} />})}
+                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el.id)}} className={el.id == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
             </div>
             <div className={style.buttonsv1}>
                 <div>
