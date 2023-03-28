@@ -1,9 +1,13 @@
 import style from "./Dialog.module.css"
 
-export default function Team() {
+interface Props {
+    name:string
+}
+
+export default function Team({name}:Props) {
     return (
         <div className={style.team}>
-            <p className={style.name}>Name</p>
+            <p className={style.name}>{name}</p>
         </div>
     )
 }

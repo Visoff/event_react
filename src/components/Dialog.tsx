@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useContext, useEffect, useState } from "react"
 import PopupContext from "../PopupContext"
 import style from "./Dialog.module.css"
@@ -7,10 +8,18 @@ import Dialog_Team from "./Dialog_Team"
 export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
+    const [Teams, setTeams] = useState([])
+    useEffect(() => {
+        axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user)id")}/teams`).then(res => {
+            setTeams(JSON.parse(res.data))
+        })
+    }, [])
     var first = (
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
-            <div className={style.list}></div>
+            <div className={style.list}>
+                {Teams.map(el => {return <Dialog_Team name={(el as any).name} />})}
+            </div>
             <div className={style.buttonsv1}>
                 <div>
                     <button onClick={() => {setPage("find")}}>Найти команду</button>
@@ -27,7 +36,7 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Поиск команды</h1>
             <div className={style.list}>
-                <Dialog_Team />
+                <Dialog_Team name="name" />
             </div>
         </div>
     )
