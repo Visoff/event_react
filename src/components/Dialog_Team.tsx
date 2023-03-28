@@ -2,7 +2,7 @@ import { MouseEventHandler } from "react"
 import style from "./Dialog.module.css"
 
 interface Props {
-    name:string,
+    name?:string
     className?:string,
     onClick?:MouseEventHandler<HTMLButtonElement>
 }

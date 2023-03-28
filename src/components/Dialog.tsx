@@ -9,10 +9,15 @@ export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
     const [Teams, setTeams] = useState([])
+    const [SearchTeams, setSearchTeams] = useState([])
     const [SelectedTeam, setSelectedTeam] = useState({id:0, name:""})
     useEffect(() => {
         axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(res.data)
+            console.log(res.data)
+        })
+        axios.get(`https://api.visoff.ru/team/search`).then(res => {
+            setSearchTeams(res.data)
             console.log(res.data)
         })
     }, [])
@@ -38,7 +43,12 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Поиск команды</h1>
             <div className={style.list}>
-                <Dialog_Team name="name" />
+                {SearchTeams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} key={el.id} name={el.name} />})}
+            </div>
+            <div className={style.buttonsv1}>
+                <div>
+                    <button onClick={() => {axios.post(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/register/${SelectedTeam.id}`); setPage("first")}}>Вступить</button>
+                </div>
             </div>
         </div>
     )
