@@ -21,7 +21,7 @@ form.form > input {
     font-size: 1em;
     padding: 0 1rem;
     background: none;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(91, 53, 173, .2);
     color: whitesmoke;
 }
 form.form > input::placeholder {
