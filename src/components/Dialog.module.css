@@ -58,10 +58,10 @@ div.buttonsv1 > div > button {
 }
 
 div.list > div.team {
-    width: calc(100% - 10px - .4rem);
+    width: calc(100% - 10px - 1rem);
     margin-left: 5px;
     margin-top: 5px;
-    padding: 0 .2rem;
+    padding: 0 .5rem;
     height: 1.5rem;
     box-shadow: 0 0 10px black;
     border-radius: 1.2rem;
