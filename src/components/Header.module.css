@@ -28,7 +28,7 @@ div.container > button:first-child {
 }
 
 div.container > button:first-child > img {
-    width: calc(100% + .5rem);
+    width: calc(100% + .25rem);
     position: absolute;
     top: 50%;
     left: 50%;
