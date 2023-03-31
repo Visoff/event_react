@@ -24,9 +24,12 @@ div.container > .main {
     align-items: center;
 }
 
-.main > h1 {
+.main > :is(h1, h2) {
     font-size: 1rem;
     margin: 1rem;
+}
+.main > h2 {
+    font-size: .75rem;
 }
 .main > .list {
     flex-grow: 1;
