@@ -15,7 +15,7 @@ export default function Team({team, className, onClick}:Props) {
     return (
         <button onClick={(onClick != undefined ? onClick : (e) => {})} className={style.team+(className != undefined ? " "+className : "")}>
             <p className={style.name}>{team?.name}</p>
-            <p className={style.members}>{team?.members}</p>
+            <p className={style.members}>Чел: {team?.members}</p>
         </button>
     )
 }
