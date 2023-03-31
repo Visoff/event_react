@@ -41,10 +41,6 @@ export default function Dialog({sellected}:{sellected:"first"|"select"|"find"|"c
             </div>
             <div className={style.buttonsv1}>
                 <div>
-                    <button onClick={() => {setPage("find")}}>Найти команду</button>
-                </div>
-                <div>
-                    <button onClick={() => {setPage("create")}}>Создать новую</button>
                     <button onClick={() => {axios.post(`https://api.visoff.ru/db/team/${SelectedTeam.id}/register/1`); setActive(false)}}>Выбрать</button>
                 </div>
             </div>
