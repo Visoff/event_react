@@ -10,7 +10,7 @@ export default function Dialog({sellected}:{sellected:"first"|"select"|"find"|"c
     const [page, setPage] = useState(sellected)
     const [Teams, setTeams] = useState([])
     const [SearchTeams, setSearchTeams] = useState([])
-    const [SelectedTeam, setSelectedTeam] = useState({id:0, name:""})
+    const [SelectedTeam, setSelectedTeam] = useState({id:0, name:"", members:0})
     useEffect(() => {
         axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
             setTeams(res.data)
@@ -37,7 +37,7 @@ export default function Dialog({sellected}:{sellected:"first"|"select"|"find"|"c
         <div className={style.main}>
             <h1>Выбор команд из своих</h1>
             <div className={style.list}>
-                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
+                {Teams.map((el:{id:number, name:string, members:number}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} team={el} />})}
             </div>
             <div className={style.buttonsv1}>
                 <div>
@@ -51,7 +51,7 @@ export default function Dialog({sellected}:{sellected:"first"|"select"|"find"|"c
         <div className={style.main}>
             <h1>Поиск команды</h1>
             <div className={style.list}>
-                {SearchTeams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
+                {SearchTeams.map((el:{id:number, name:string, members:number}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} team={el} />})}
             </div>
             <div className={style.buttonsv1}>
                 <div>

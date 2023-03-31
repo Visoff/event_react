@@ -75,7 +75,8 @@ div.list > button.team {
     transition: box-shadow .3s;
 
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 
     position: relative;
     font-weight: normal;
@@ -84,7 +85,7 @@ div.list > button.team.selected {
     box-shadow: 0 0 15px rgb(65, 27, 147);
 }
 
-div.list > button.team > p.name {
+div.list > button.team > :id(p.name, p.members) {
     margin: 0;
     font-size: 1.1rem;
     font-weight: bold;
