@@ -39,11 +39,11 @@ div.container > button:first-child::after {
     position: absolute;
     content: "?";
     font-size: 4rem;
-    top: 50%;
-    left: 50%;
+    top: 100%;
+    left: 100%;
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 50%);
-    animation: blink .5s infinite;
+    animation: blink 2s infinite;
 }
 
 @keyframes blink {
