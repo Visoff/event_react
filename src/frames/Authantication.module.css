@@ -1,4 +1,46 @@
 form.form {
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    gap: 1.2rem;
+    box-shadow: 0 0 10px black;
+    padding: 3rem .2rem;
+    border-radius: 1.2rem;
+    background-color: rgba(65, 27, 147, .2);
+}
+
+main:has( > .form) {
+    display: grid;
+    place-items: center;
+}
+
+form.form > input {
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    font-size: 1em;
+    padding: 0 1rem;
+    background: none;
+    background-color: rgba(91, 53, 173, .2);
+    color: whitesmoke;
+}
+form.form > input::placeholder {
+    color: rgba(245, 245, 245, .8)
+}
+
+form.form > button {
+    padding: .2rem .3rem;
+    border: none;
+    border-radius: 1.2rem;
+    background-color: rgb(91, 53, 173);
+    box-shadow: 0 0 10px whitesmoke;
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+form.form > button.switch {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

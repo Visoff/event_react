@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useContext, useEffect, useState } from "react"
 import PopupContext from "../PopupContext"
 import style from "./Dialog.module.css"
@@ -7,17 +8,30 @@ import Dialog_Team from "./Dialog_Team"
 export default function Dialog({sellected}:{sellected:string}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
+    const [Teams, setTeams] = useState([])
+    const [SearchTeams, setSearchTeams] = useState([])
+    const [SelectedTeam, setSelectedTeam] = useState({id:0, name:""})
+    useEffect(() => {
+        axios.get(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/teams`).then(res => {
+            setTeams(res.data)
+        })
+        axios.get(`https://api.visoff.ru/db/team/search`).then(res => {
+            setSearchTeams(res.data)
+        })
+    }, [page, Active])
     var first = (
         <div className={style.main}>
             <h1>Выберите команду для участия</h1>
-            <div className={style.list}></div>
+            <div className={style.list}>
+                {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
+            </div>
             <div className={style.buttonsv1}>
                 <div>
                     <button onClick={() => {setPage("find")}}>Найти команду</button>
                 </div>
                 <div>
                     <button onClick={() => {setPage("create")}}>Создать новую</button>
-                    <button>Выбрать</button>
+                    <button onClick={() => {axios.post(`https://api.visoff.ru/db/team/${SelectedTeam.id}/register/1`); setActive(false)}}>Выбрать</button>
                 </div>
             </div>
         </div>
@@ -27,7 +41,12 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.main}>
             <h1>Поиск команды</h1>
             <div className={style.list}>
-                <Dialog_Team />
+                {SearchTeams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
+            </div>
+            <div className={style.buttonsv1}>
+                <div>
+                    <button onClick={() => {axios.post(`https://api.visoff.ru/db/user/${localStorage.getItem("user_id")}/register/${SelectedTeam.id}`); setPage("first")}}>Вступить</button>
+                </div>
             </div>
         </div>
     )
@@ -37,7 +56,8 @@ export default function Dialog({sellected}:{sellected:string}) {
     })
     const createSubmitEvent = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // request creation
+        axios.post("https://api.visoff.ru/db/team/register", {name:createData.name})
+        setPage("first")
     }
     var create = (
         <form className={style.main} onSubmit={createSubmitEvent}>
@@ -54,7 +74,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     )
 
     return (
-        <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? setActive(false) : ""}}>
+        <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? (() => {setPage("first"); setActive(false)})() : ""}}>
             {
                 page == "first" ? first : 
                 page == 'find' ? find :

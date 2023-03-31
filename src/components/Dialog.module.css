@@ -32,6 +32,9 @@ div.container > .main {
     flex-grow: 1;
     width: 100%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 div.buttonsv1 {
@@ -52,20 +55,39 @@ div.buttonsv1 > div > button {
     color: whitesmoke;
     font-size: 1.2rem;
     border: none;
+    padding: .2rem 0;
 }
 
-div.list > div.team {
-    width: calc(100% - 2px);
+div.list > button.team {
+    width: calc(100% - 10px);
     height: 1.5rem;
-    border: 1px solid black;
+
+    margin-left: 5px;
+    margin-top: 5px;
+    
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 1.2rem;
+    transition: box-shadow .3s;
+
     display: flex;
     align-items: center;
+
+    position: relative;
+    font-weight: normal;
+}
+div.list > button.team.selected {
+    box-shadow: 0 0 15px rgb(65, 27, 147);
 }
 
-div.list > div.team > p.name {
+div.list > button.team > p.name {
+    margin: 0;
     font-size: 1.1rem;
     font-weight: bold;
-    margin: 0 .2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 div.list > input {
