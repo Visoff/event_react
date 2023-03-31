@@ -12,6 +12,7 @@ div.container > div:nth-child(2) {
     flex-direction: row;
     justify-content: space-between;
     width: max-content;
+    margin-left: 1rem;
 }
 
 div.container > div:nth-child(2) > button:nth-child(1) {
