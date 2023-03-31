@@ -30,7 +30,7 @@ div.container > .main {
 }
 .main > h2 {
     margin-top: 0;
-    font-size: .75rem;
+    font-size: .85rem;
 }
 .main > .list {
     flex-grow: 1;
