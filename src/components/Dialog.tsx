@@ -23,8 +23,12 @@ export default function Dialog({sellected}:{sellected:string}) {
     var first = (
         <div className={style.main}>
             <h1>Рагистрация на хакатон</h1>
+            <h2>Выберите команду</h2>
             <div className={style.list}>
-                <button className={style.option} onClick={() => {console.log(123)}}>Найти команду</button>
+                <button className={style.option} onClick={() => {console.log(123)}}>Выбрать свою</button>
+                <button className={style.option} onClick={() => {console.log(123)}}>Найти новую</button>
+                <button className={style.option} onClick={() => {console.log(123)}}>Создать новую</button>
+                <button className={style.option} onClick={() => {console.log(123)}}>Пойти без команды</button>
             </div>
         </div>
     )
