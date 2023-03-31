@@ -7,9 +7,11 @@ import style from "./App.module.css"
 import { createContext, useContext, useState } from "react"
 import PopupContext from "./PopupContext"
 import Auth from "./frames/Authantication"
+import Teams from "./frames/Teams"
 
 export default function App() {
     const [PopupActive, setPopupActive] = useState(false)
+    const [Frame, setFrame] = useState("Home")
     var user_id = localStorage.getItem("user_id")
     var registered = (
         <div className={style.container}>
@@ -18,10 +20,13 @@ export default function App() {
                     <Header />
                 </header>
                 <main>
-                    <Home />
+                    {
+                        Frame == "Home" ? <Home /> :
+                        Frame == "Teams" ? <Teams /> : ""
+                    }
                 </main>
                 <nav>
-                    <Nav />
+                    <Nav FrameState={[Frame, setFrame]} />
                 </nav>
                 <Dialog sellected="first" />
             </PopupContext.Provider>
