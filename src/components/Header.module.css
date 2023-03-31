@@ -38,10 +38,10 @@ div.container > button:first-child > img {
 div.container > button:first-child::after {
     position: absolute;
     content: "?";
-    font-size: 4rem;
+    font-size: 2rem;
     top: 100%;
     left: 100%;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -100%);
     color: rgba(255, 255, 255, 50%);
     animation: blink 2s infinite;
 }
