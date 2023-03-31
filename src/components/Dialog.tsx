@@ -21,7 +21,7 @@ export default function Dialog({sellected}:{sellected:string}) {
     }, [page, Active])
 
     var first = (
-        <div>
+        <div className={style.main}>
             <h1>Рагистрация на хакатон</h1>
             <div className={style.list}>
                 <button onClick={() => {console.log(123)}}>Найти команду</button>
