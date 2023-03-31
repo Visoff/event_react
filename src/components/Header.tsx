@@ -11,7 +11,7 @@ export default function Header() {
             </button>
             <div>
                 <button onClick={() => {setActive(true)}}>Регистрация</button>
-                <div style={{height:"100%", aspectRatio:1, backgroundColor:"grey"}}></div>
+                <div style={{height:"3rem", aspectRatio:1, backgroundColor:"grey"}}></div>
             </div>
         </div>
     )
