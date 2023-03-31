@@ -19,9 +19,19 @@ export default function Dialog({sellected}:{sellected:string}) {
             setSearchTeams(res.data)
         })
     }, [page, Active])
+
     var first = (
+        <div>
+            <h1>Рагистрация на хакатон</h1>
+            <div className={style.list}>
+                <button onClick={() => {console.log(123)}}>Найти команду</button>
+            </div>
+        </div>
+    )
+
+    var select = (
         <div className={style.main}>
-            <h1>Выберите команду для участия</h1>
+            <h1>Выбор команд из своих</h1>
             <div className={style.list}>
                 {Teams.map((el:{id:number, name:string}) => {return <Dialog_Team onClick={(e) => {setSelectedTeam(el)}} className={el == SelectedTeam ? style.selected : ""} key={el.id} name={el.name} />})}
             </div>
@@ -77,6 +87,7 @@ export default function Dialog({sellected}:{sellected:string}) {
         <div className={style.container + (Active ? " "+style.active : "")} onClick={(e) => {(e.target as HTMLElement).classList.contains(style.container) ? (() => {setPage("first"); setActive(false)})() : ""}}>
             {
                 page == "first" ? first : 
+                page == 'select' ? select : 
                 page == 'find' ? find :
                 page == 'create' ? create :
                 ""
