@@ -5,7 +5,7 @@ import style from "./Dialog.module.css"
 
 import Dialog_Team from "./Dialog_Team"
 
-export default function Dialog({sellected}:{sellected:string}) {
+export default function Dialog({sellected}:{sellected:"first"|"select"|"find"|"create"}) {
     const [Active, setActive] = useContext(PopupContext)
     const [page, setPage] = useState(sellected)
     const [Teams, setTeams] = useState([])
@@ -25,10 +25,10 @@ export default function Dialog({sellected}:{sellected:string}) {
             <h1>Рагистрация на хакатон</h1>
             <h2>Выберите команду</h2>
             <div className={style.list}>
-                <button className={style.option} onClick={() => {console.log(123)}}>Выбрать свою</button>
-                <button className={style.option} onClick={() => {console.log(123)}}>Найти новую</button>
-                <button className={style.option} onClick={() => {console.log(123)}}>Создать новую</button>
-                <button className={style.option} onClick={() => {console.log(123)}}>Пойти без команды</button>
+                <button className={style.option} onClick={() => {setPage("select")}}>Выбрать свою</button>
+                <button className={style.option} onClick={() => {setPage("find")}}>Найти новую</button>
+                <button className={style.option} onClick={() => {setPage("create")}}>Создать новую</button>
+                <button className={style.option} onClick={() => {/* some axios stuff */; setPage("first"); setActive(false)}}>Пойти без команды</button>
             </div>
         </div>
     )
