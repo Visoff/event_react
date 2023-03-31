@@ -9,7 +9,8 @@ export default function Header() {
             <button onClick={() => {console.log(123)}}>
                 <img src="https://visoff.ru/svg/CityHeroes_Icon.svg" alt="Лого CityHeroes" />
             </button>
-            <button onClick={() => {setActive(true)}}>Зарегистрироваться</button>
+            <button onClick={() => {setActive(true)}}>Регистрация</button>
+            <div style={{height:"100%", aspectRatio:1, backgroundColor:"grey"}}></div>
         </div>
     )
 }
